@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Junction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-banner">
+    <!-- Header & Logo -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Trip Junction Logo">
+            <h1>Trip Junction</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2 class="hero-text">Plan Your Perfect Trip</h2>
+        <p>Your adventure starts here!</p>
+    </section>
+
+    <!-- Trip Planner Form -->
+    <section id="trip-planner">
+        <form id="tripForm">
+            <div class="form-row">
+                <div class="form-item">
+                    <label for="from">From:</label>
+                    <input type="text" id="from" value="Bangalore" readonly>
+                </div>
+
+                <div class="form-item">
+                    <label for="to">To:</label>
+                    <select id="to" required>
+                        <option value="">--Select Destination--</option>
+                        <option value="Goa" data-img="Goa.png">Goa</option>
+                        <option value="Mysore" data-img="mysore.webp">Mysore</option>
+                        <option value="Coorg" data-img="coorg.jpeg">Coorg</option>
+                        <option value="Hampi" data-img="hampi.webp">Hampi</option>
+                    </select>
+                    <img id="destPreview" src="" alt="Destination Preview" style="display:none; width:100px; margin-top:10px; border-radius:8px;">
+                </div>
+
+                <div class="form-item">
+                    <label for="days">Days:</label>
+                    <select id="days" required>
+                        <option value="">Select 1-5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <button type="submit">Next</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+<!-- Destinations Section -->
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination-grid">
+        <div class="destination-card">
+            <img src="Goa.png" alt="Goa">
+            <p>Goa – Famous for Beaches and Nightlife</p>
+        </div>
+        <div class="destination-card">
+            <img src="mysore.webp" alt="Mysore">
+            <p>Mysore – Palaces and Heritage</p>
+        </div>
+        <div class="destination-card">
+            <img src="coorg.jpeg" alt="Coorg">
+            <p>Coorg – Mountains and Coffee Plantations</p>
+        </div>
+        <div class="destination-card">
+            <img src="hampi.webp" alt="Hampi">
+            <p>Hampi – Temples and Historical Ruins</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Trip Junction helps you plan trips easily. Select your destination, duration, and enjoy a curated journey!</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@tripjunction.com</p>
+    <p>Phone: +91-1234567890</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Trip Junction. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

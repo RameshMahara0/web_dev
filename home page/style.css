@@ -1,0 +1,224 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Banner */
+.top-banner {
+    background: url('background.png') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 80px 20px;
+    position: relative;
+}
+
+/* Overlay to darken background */
+.top-banner::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.25);
+    z-index:1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2; 
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 87, 51, 0.85);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.logo h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Navigation */
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+.hero-text {
+    font-size: 56px;
+    background: rgba(255, 87, 51, 0.8);
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+.hero p { font-size: 24px; margin-top: 15px; }
+
+/* Trip Planner - Modern Gradient & Shadow Animation */
+#trip-planner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #FF7E5F, #FFB88C);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3), 0 12px 40px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+    top: -40px;
+    transition: all 0.4s ease-in-out;
+    animation: float 6s ease-in-out infinite;
+}
+#trip-planner:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(255, 87, 51, 0.5), 0 16px 50px rgba(0,0,0,0.3);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Form Layout */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 22px;
+    color: #333;
+    background: rgba(255,255,255,0.85);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    width: 220px;
+}
+.form-item label { font-weight: bold; margin-bottom: 8px; }
+
+#trip-planner input,
+#trip-planner select {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background: transparent;
+}
+#trip-planner input:hover,
+#trip-planner select:hover,
+#trip-planner input:focus,
+#trip-planner select:focus {
+    box-shadow: 0 0 8px rgba(255,87,51,0.5) inset;
+    border-radius: 15px;
+}
+
+/* Days Input */
+#days {
+    border: 2px solid #FF5733;
+    background: #fff8f5;
+}
+
+/* Submit Button */
+#trip-planner button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 22px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FF5733, #FF8A50);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(255,87,51,0.4);
+    transition: all 0.3s ease;
+}
+#trip-planner button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(255,87,51,0.5);
+}
+
+/* Destinations */
+#destinations { text-align: center; padding: 40px 20px; }
+#destinations h2 { font-size: 40px; margin-bottom: 30px; }
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.destination-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+}
+.destination-card:hover { transform: scale(1.05); }
+.destination-card img { width: 100%; height: 150px; object-fit: cover; }
+.destination-card p { padding: 10px; font-weight: 500; }
+
+/* About & Contact */
+section { padding: 40px 20px; text-align: center; }
+#about, #contact { background: #f8f8f8; }
+#about h2, #contact h2 { font-size: 36px; margin-bottom: 20px; }
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    .logo { flex-direction: column; }
+    .hero-text { font-size: 42px; }
+    .hero p { font-size: 20px; }
+    .form-row { flex-direction: column; align-items: center; }
+    #trip-planner input,
+    #trip-planner select,
+    #trip-planner button { width: 100%; max-width: 320px; }
+}
